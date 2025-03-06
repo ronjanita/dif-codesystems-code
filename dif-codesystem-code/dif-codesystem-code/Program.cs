@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace dif_codesystem_code
+{
+    internal class Program
+    {
+        static void Main ()
+        {
+            ConsoleOutput consoleOutput = new ConsoleOutput();
+        }
+    }
+}
