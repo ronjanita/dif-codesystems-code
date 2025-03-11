@@ -23,7 +23,8 @@ namespace dif_codesystem_code
             
             switch (UserInputStartNumberSystem)
             {
-                case "B";
+                c
+                c
 
             }
             Console.WriteLine("Please enter the end-number system(B, O, D, H):");
