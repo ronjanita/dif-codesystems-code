@@ -20,17 +20,22 @@ namespace dif_codesystem_code
 
             Console.WriteLine("Please enter the start-number system(B, O, D, H):");
             string UserInputStartNumberSystem = Console.ReadLine();   
-            
+
+            Console.WriteLine("Please enter the end-number system(B, O, D, H):");
+            string UserInputEndNumberSystem = Console.ReadLine();
+             
+            Console.WriteLine("Please enter your number based code:");
+            string UserInput = Console.ReadLine(); 
+        }
+        public static void ShowEcryptedCode()
+        {
+            string UserInputStartNumberSystem = Console.ReadLine();
+            int userInputStart = Int32.Parse(UserInputStartNumberSystem);
             switch (UserInputStartNumberSystem)
             {
-                c
-                c
+                case 'B':
 
             }
-            Console.WriteLine("Please enter the end-number system(B, O, D, H):");
-            string UserInputEndNumberSystem = Console.ReadLine();       //if else logik machen? oder mit schleife arbieten? 
-            Console.WriteLine("Please enter your number based code:");
-            string UserInput = Console.ReadLine();      //if else logik machen? oder mit schleife arbieten? 
         }
     }
 }
