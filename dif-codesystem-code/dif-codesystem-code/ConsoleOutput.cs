@@ -29,14 +29,7 @@ namespace dif_codesystem_code
         }
         public static void ShowEcryptedCode()
         {
-            string UserInputStartNumberSystem = Console.ReadLine();
-            int userInputStart = Int32.Parse(UserInputStartNumberSystem);
-            switch (UserInputStartNumberSystem)
-            {
-                case 'B':
 
-            }
-        }
     }
 }
 //public static string GetInput() { ... }
