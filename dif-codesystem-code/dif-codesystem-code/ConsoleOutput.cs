@@ -19,20 +19,60 @@ namespace dif_codesystem_code
             Console.WriteLine("The available number systems are: binary(B), octal(O), decimal(D) and hexadecimal(H).");
 
             Console.WriteLine("Please enter the start-number system(B, O, D, H):");
-            string UserInputStartNumberSystem = Console.ReadLine();   
+            string UserInputStartNumberSystem = Console.ReadLine();
 
             Console.WriteLine("Please enter the end-number system(B, O, D, H):");
             string UserInputEndNumberSystem = Console.ReadLine();
-             
+
             Console.WriteLine("Please enter your number based code:");
-            string UserInput = Console.ReadLine(); 
+            string UserInput = Console.ReadLine();
+            ShowEcryptedCode(UserInputStartNumberSystem, UserInputEndNumberSystem, UserInput)
         }
-        public static void ShowEcryptedCode()
+        public static void ShowEcryptedCode(string startNumberSystem, string endNumberSystem, string UserInput)
         {
 
+            switch (startNumberSystem)
+            {
+                case "B":
+                    BinarySystem.ToDec
+                    break;
+
+                case "O":
+                    OctalSystem.ToDec
+                    break;
+
+                case "D":
+                    DecimalSystem.ToDec
+                    break;
+
+                case "H":
+                    Hexadecimal.ToDec
+                    break;
+            }
+
+            switch (endNumberSystem)
+            {
+                case "B":
+                    BinarySystem binarySystem = new Binarysystem;
+                    Console.WriteLine($"Here is your newly encrypted code based on the binary system: {binarySystem.ToBinary} ");
+                    break;
+
+                case "O":
+                    OctalSystem octalSystem = new OctalSystem;
+                    Console.WriteLine($"Here is your newly encrypted code based on the octal system: {octalSystem.ToOct} ");
+                    break;
+
+                case "D":
+                    DecimalSystem decimalSystem = new Decimalsystem;
+                    Console.WriteLine($"Here is your newly encrypted code based on the decimal system: {decimalSystem.ToDec} ");
+                    break;
+
+                case "H":
+                    HexadecimalSystem hexadecimalSystem = new HexadecimalSystem;
+                    Console.WriteLine($"Here is your newly encrypted code based on the hexadecimal system: {hexadecimalSystem.ToHex}");
+                    break;
+            }
+
+        }
     }
 }
-//public static string GetInput() { ... }
-//public static string GetStartSystem() { ... }
-//public static string GetZielSystem() { ... }
-//public static void DisplayResult(string result) { ... }
