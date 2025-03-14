@@ -34,41 +34,41 @@ namespace dif_codesystem_code
             switch (startNumberSystem)
             {
                 case "B":
-                    BinarySystem.ToDec
+                    BinarySystem.ToDec();
                     break;
 
                 case "O":
-                    OctalSystem.ToDec
+                    OctalSystem.ToDec();
                     break;
 
                 case "D":
-                    DecimalSystem.ToDec
+                    DecimalSystem.ToDec();
                     break;
 
                 case "H":
-                    Hexadecimal.ToDec
+                    Hexadecimal.ToDec();
                     break;
             }
 
             switch (endNumberSystem)
             {
                 case "B":
-                    BinarySystem binarySystem = new Binarysystem;
+                    BinarySystem binarySystem = new Binarysystem();
                     Console.WriteLine($"Here is your newly encrypted code based on the binary system: {binarySystem.ToBinary} ");
                     break;
 
                 case "O":
-                    OctalSystem octalSystem = new OctalSystem;
+                    OctalSystem octalSystem = new OctalSystem();
                     Console.WriteLine($"Here is your newly encrypted code based on the octal system: {octalSystem.ToOct} ");
                     break;
 
                 case "D":
-                    DecimalSystem decimalSystem = new Decimalsystem;
+                    DecimalSystem decimalSystem = new Decimalsystem();
                     Console.WriteLine($"Here is your newly encrypted code based on the decimal system: {decimalSystem.ToDec} ");
                     break;
 
                 case "H":
-                    HexadecimalSystem hexadecimalSystem = new HexadecimalSystem;
+                    HexadecimalSystem hexadecimalSystem = new HexadecimalSystem();
                     Console.WriteLine($"Here is your newly encrypted code based on the hexadecimal system: {hexadecimalSystem.ToHex}");
                     break;
             }
