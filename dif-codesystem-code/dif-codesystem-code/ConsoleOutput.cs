@@ -26,7 +26,7 @@ namespace dif_codesystem_code
 
             Console.WriteLine("Please enter your number based code:");
             string UserInput = Console.ReadLine();
-            ShowEcryptedCode(UserInputStartNumberSystem, UserInputEndNumberSystem, UserInput)
+            ShowEcryptedCode(UserInputStartNumberSystem, UserInputEndNumberSystem, UserInput);
         }
         public static void ShowEcryptedCode(string startNumberSystem, string endNumberSystem, string UserInput)
         {
@@ -53,7 +53,7 @@ namespace dif_codesystem_code
             switch (endNumberSystem)
             {
                 case "B":
-                    BinarySystem binarySystem = new Binarysystem();
+                    BinarySystem binarySystem = new Binaryystem();
                     Console.WriteLine($"Here is your newly encrypted code based on the binary system: {binarySystem.ToBinary} ");
                     break;
 
