@@ -30,8 +30,8 @@ namespace dif_codesystem_code
         }
         public static void ShowEcryptedCode(string startNumberSystem, string endNumberSystem, string UserInput)
         {
-            int returnEncryptedText;
-            int returnDecValue;
+            string returnEncryptedText;
+            int returnDecValue=0;
 
             switch (startNumberSystem)
             {
@@ -56,8 +56,9 @@ namespace dif_codesystem_code
             switch (endNumberSystem)
             { 
                 case "B":
-                    returnEncryptedText = BinarySystem.ToBinary(returnDecValue);
-                    Console.WriteLine($"Here is your newly encrypted code based on the binary system: {BinarySystem.ToBinary} ");
+                    //returnEncryptedText = BinarySystem.ToBinary(returnDecValue);
+                    BinarySystem binarySystemConverted = new BinarySystem(returnDecValue);
+                    Console.WriteLine($"Here is your newly encrypted code based on the binary system: {binarySystemConverted.binary} ");
                     break;
 
                 case "O":
