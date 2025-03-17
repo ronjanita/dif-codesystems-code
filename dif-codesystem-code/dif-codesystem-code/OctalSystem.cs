@@ -47,7 +47,17 @@ namespace dif_codesystem_code
         }
         public static int ToDec(string userInput)
         {
-
+            int decimalValue = 0;
+            int[] octalnumbers = { 64, 8, 1 };
+            for (int positionSingleOctalDigit = 0; positionSingleOctalDigit < userInput.Length; positionSingleOctalDigit++)
+            {
+                int currentDigit = userInput[positionSingleOctalDigit] - '0';  //aktuelles zeichgen wir din ganzzahl umgewandelt und kovertiert das z4eichenin entsprechenden integer wert
+                if (currentDigit >= 0 && currentDigit <= 7)  //überprüfung der gültigkeit des oktalwertes also ob es zwischen 0 und 7 mal vorkjommt
+                {
+                    decimalValue += currentDigit * octalnumbers[positionSingleOctalDigit];  //berechnung der finalen dezimalzahl
+                }
+            }
+            return decimalValue;
         }
     }
 }
