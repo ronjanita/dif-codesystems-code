@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace dif_codesystem_code
 {
@@ -30,7 +26,7 @@ namespace dif_codesystem_code
         }
         public static void ShowEcryptedCode(string startNumberSystem, string endNumberSystem, string UserInput)
         {
-            string returnEncryptedText;
+           
             int returnDecValue=0;
 
             switch (startNumberSystem)
@@ -62,8 +58,8 @@ namespace dif_codesystem_code
                     break;
 
                 case "O":
-                    OctalSystem octalSystem = new OctalSystem();
-                    Console.WriteLine($"Here is your newly encrypted code based on the octal system: {octalSystem.ToOct} ");
+                    OctalSystem octalSystem = new OctalSystem(returnDecValue);
+                    Console.WriteLine($"Here is your newly encrypted code based on the octal system: {octalSystem.octal} ");
                     break;
 
                 case "D":

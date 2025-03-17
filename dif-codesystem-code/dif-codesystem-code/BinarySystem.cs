@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace dif_codesystem_code
 {
@@ -14,7 +10,7 @@ namespace dif_codesystem_code
             ToBinary(returnDecValue);
 
         }
-        public string ToBinary(int returnDecValue)
+        public void ToBinary(int returnDecValue)
         {
             int[] binarynumbers = { 128, 64, 32, 16, 8, 4, 2, 1 };   // needed to initialize the binary number
             foreach (int value in binarynumbers)  //used to go through every single value of the befdore created bianrynumbers array, for each value it checks if returnDecValue is greate ror ewqual to current binary value
@@ -29,7 +25,6 @@ namespace dif_codesystem_code
                     binary += "0";  //if its smaller or equaol a 0 gets outpiut
                 }
             }
-            return binary;  //retiurn the whole bianry code
         }
         public static int ToDec(string userInput)
         {
