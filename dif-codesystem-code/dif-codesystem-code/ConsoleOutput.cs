@@ -37,7 +37,7 @@ namespace dif_codesystem_code
                     break;
 
                 case "O":
-                    OctalSystem.ToDec();
+                    returnDecValue = OctalSystem.ToDec(UserInput);
                     break;
 
                 case "D":
