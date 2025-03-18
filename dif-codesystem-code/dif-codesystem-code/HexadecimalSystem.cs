@@ -75,7 +75,29 @@ namespace dif_codesystem_code
         }
         public static int ToDec(string userInput)
         {
+            int decimalValue = 0;
+            int[] hexadecimalnumbers = { 256, 16, 1 };
 
+            for (int currentPositionOfHexa = 0; currentPositionOfHexa < userInput.Length; currentPositionOfHexa++)  //schleife die durch alle hexadecimal zeicehn geht
+            {
+                char currentChar = userInput[currentPositionOfHexa];
+                int currentDigit= 0;
+
+                if (currentChar >= '0' && currentChar <= '9')  //wandelt zeichen direkt in zahl um
+                {
+                    currentDigit = currentChar - '0';
+                }
+                else if (currentChar >= 'A' && currentChar <= 'F')  
+                {
+                    currentDigit = currentChar - 'A' + 10;
+                }
+                else if (currentChar >= 'a' && currentChar <= 'f')  // wandelt A in 10 um, B in 11 und so weiter, sowohll gross wie auch klein buchstaben
+                {
+                    currentDigit = currentChar - 'a' + 10;
+                }
+                decimalValue += currentDigit * hexadecimalnumbers[hexadecimalnumbers.Length - userInput.Length + currentPositionOfHexa];  //berechnung dezimalwert
+            }
+            return decimalValue;  //rückgabe endergebnis ( dezimalwert)
         }
     }
 }
