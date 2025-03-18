@@ -44,9 +44,9 @@ namespace dif_codesystem_code
                     returnDecValue = Convert.ToInt32(UserInput);
                     break;
 
-                //case "H":
-                //    Hexadecimal.ToDec();
-                //    break;
+                case "H":
+                    HexadecimalSystem.ToDec(UserInput);
+                    break;
             }
 
             switch (endNumberSystem)
@@ -66,10 +66,10 @@ namespace dif_codesystem_code
                     Console.WriteLine($"Here is your newly encrypted code based on the decimal system: {returnDecValue} ");
                     break;
 
-                //case "H":
-                //    HexadecimalSystem hexadecimalSystem = new HexadecimalSystem();
-                //    Console.WriteLine($"Here is your newly encrypted code based on the hexadecimal system: {hexadecimalSystem.ToHex}");
-                //    break;
+                case "H":
+                    HexadecimalSystem hexadecimalSystem = new HexadecimalSystem(returnDecValue);
+                    Console.WriteLine($"Here is your newly encrypted code based on the hexadecimal system: {hexadecimalSystem.hexadecimal}");
+                    break;
             }
 
         }
