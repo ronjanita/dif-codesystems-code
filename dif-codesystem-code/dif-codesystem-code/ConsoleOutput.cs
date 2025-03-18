@@ -11,7 +11,7 @@ namespace dif_codesystem_code
         public static void GetInput()
         {
             Console.WriteLine("Welcome to this encryption program, where you are able to encrypt your number based code, into a new number based code system.");
-            Console.WriteLine("Explanation: First, you select the number system that your input is based on. Second you select the nu,mber system you want your text to get encrypted to. Latly you enter the number code you want ot encrypt. Press enter and your newly encrypted number code get displayed!");
+            Console.WriteLine("Explanation: First, you select the number system that your input is based on. Second you select the nu,mber system you want your text to get encrypted to. Lastly you enter the number code you want ot encrypt. Press enter and your newly encrypted number code get displayed!");
             Console.WriteLine("The available number systems are: binary(B), octal(O), decimal(D) and hexadecimal(H).");
 
             Console.WriteLine("Please enter the start-number system(B, O, D, H):");
@@ -45,7 +45,7 @@ namespace dif_codesystem_code
                     break;
 
                 case "H":
-                    HexadecimalSystem.ToDec(UserInput);
+                    returnDecValue = HexadecimalSystem.ToDec(UserInput);
                     break;
             }
 
@@ -58,8 +58,8 @@ namespace dif_codesystem_code
                     break;
 
                 case "O":
-                    OctalSystem octalSystem = new OctalSystem(returnDecValue);
-                    Console.WriteLine($"Here is your newly encrypted code based on the octal system: {octalSystem.octal} ");
+                    OctalSystem octalSystemConverted = new OctalSystem(returnDecValue);
+                    Console.WriteLine($"Here is your newly encrypted code based on the octal system: {octalSystemConverted.octal} ");
                     break;
 
                 case "D":
@@ -67,8 +67,8 @@ namespace dif_codesystem_code
                     break;
 
                 case "H":
-                    HexadecimalSystem hexadecimalSystem = new HexadecimalSystem(returnDecValue);
-                    Console.WriteLine($"Here is your newly encrypted code based on the hexadecimal system: {hexadecimalSystem.hexadecimal}");
+                    HexadecimalSystem hexadecimalSystemConverted = new HexadecimalSystem(returnDecValue);
+                    Console.WriteLine($"Here is your newly encrypted code based on the hexadecimal system: {hexadecimalSystemConverted.hexadecimal}");
                     break;
             }
 

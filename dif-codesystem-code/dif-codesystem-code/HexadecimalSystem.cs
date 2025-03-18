@@ -81,7 +81,7 @@ namespace dif_codesystem_code
             for (int currentPositionOfHexa = 0; currentPositionOfHexa < userInput.Length; currentPositionOfHexa++)  //schleife die durch alle hexadecimal zeicehn geht
             {
                 char currentChar = userInput[currentPositionOfHexa];
-                int currentDigit= 0;
+                int currentDigit;
 
                 if (currentChar >= '0' && currentChar <= '9')  //wandelt zeichen direkt in zahl um
                 {
@@ -95,7 +95,11 @@ namespace dif_codesystem_code
                 {
                     currentDigit = currentChar - 'a' + 10;
                 }
-                decimalValue += currentDigit * hexadecimalnumbers[hexadecimalnumbers.Length - userInput.Length + currentPositionOfHexa];  //berechnung dezimalwert
+                else
+                {
+                    currentDigit = 0;
+                }
+                    decimalValue += currentDigit * hexadecimalnumbers[hexadecimalnumbers.Length - userInput.Length + currentPositionOfHexa];  //berechnung dezimalwert
             }
             return decimalValue;  //rückgabe endergebnis ( dezimalwert)
         }
