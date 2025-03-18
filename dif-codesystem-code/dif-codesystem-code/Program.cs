@@ -4,7 +4,7 @@
     {
         static void Main ()
         {
-            ConsoleOutput consoleOutput = new ConsoleOutput();
+            ConsoleOutput consoleOutput = new ConsoleOutput();s
         }
     }
 }

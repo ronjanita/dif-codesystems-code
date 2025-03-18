@@ -41,7 +41,6 @@ namespace dif_codesystem_code
                     break;
 
                 case "D":
-                    DecimalSystem.ToDec();
                     break;
 
                 case "H":
@@ -63,8 +62,7 @@ namespace dif_codesystem_code
                     break;
 
                 case "D":
-                    DecimalSystem decimalSystem = new Decimalsystem();
-                    Console.WriteLine($"Here is your newly encrypted code based on the decimal system: {decimalSystem.ToDec} ");
+                    Console.WriteLine($"Here is your newly encrypted code based on the decimal system: {returnDecValue} ");
                     break;
 
                 case "H":
