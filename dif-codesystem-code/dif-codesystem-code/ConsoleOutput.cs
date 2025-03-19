@@ -50,7 +50,7 @@ namespace dif_codesystem_code
             }
 
             switch (endNumberSystem)
-            { 
+            {
                 case "B":
                     //returnEncryptedText = BinarySystem.ToBinary(returnDecValue);
                     BinarySystem binarySystemConverted = new BinarySystem(returnDecValue);
@@ -71,7 +71,6 @@ namespace dif_codesystem_code
                     Console.WriteLine($"Here is your newly encrypted code based on the hexadecimal system: {hexadecimalSystemConverted.hexadecimal}");
                     break;
             }
-
         }
     }
 }

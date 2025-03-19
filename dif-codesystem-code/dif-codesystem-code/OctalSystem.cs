@@ -51,7 +51,8 @@ namespace dif_codesystem_code
             int[] octalnumbers = { 64, 8, 1 };
             for (int positionSingleOctalDigit = 0; positionSingleOctalDigit < userInput.Length; positionSingleOctalDigit++)
             {
-                int currentDigit = userInput[positionSingleOctalDigit] - '0';  //aktuelles zeichgen wir din ganzzahl umgewandelt und kovertiert das z4eichenin entsprechenden integer wert
+                int currentDigit = userInput[positionSingleOctalDigit];  //aktuelles zeichgen wir din ganzzahl umgewandelt und kovertiert das z4eichenin entsprechenden integer wert
+                currentDigit -= '0';
                 if (currentDigit >= 0 && currentDigit <= 7)  //überprüfung der gültigkeit des oktalwertes also ob es zwischen 0 und 7 mal vorkjommt
                 {
                     decimalValue += currentDigit * octalnumbers[positionSingleOctalDigit];  //berechnung der finalen dezimalzahl
